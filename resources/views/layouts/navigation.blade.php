@@ -15,6 +15,10 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('evaluations.index')" :active="request()->routeIs('evaluations')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                    <!-- Add an extra link to the quiz route. -->
                 </div>
             </div>
 
@@ -98,3 +102,7 @@
         </div>
     </div>
 </nav>
+
+
+
+
