@@ -11,19 +11,21 @@
 
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
         @endif
     </head>
     <body>
         <div class="center-container">
             <div class="inlog-container">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo Image" class="logo-img">
-                <h1 class="title">Als wie wil je inloggen?</h1>
-                <div class="inlog-button-container">
-                    <a href="{{ route('inlog.leerling.view') }}" class="button kid">Leerling</a>
-                    <a href="{{ route('inlog.leraar.view') }}" class="button teacher">Leraar</a>
-                    <a href="{{ route('inlog.ilab.view') }}" class="button admin">I-lab Medewerker</a>
-                </div>
+                <form id="QuizFormCode" method="POST" action="{{ route('check.code') }}">
+                    @csrf
+                    @if ($errors->has('quizId'))
+                        <div class="error">{{ $errors->first('quizId') }}</div>
+                    @endif
+                    <h1>Voer de Quiz code in</h1>
+                    <input class="textarea" type="text" id="quizId" name="quizId" placeholder="Voer de code hier in" maxlength="6" required>    
+                    <button class="button" type="submit">Doe mee</button>
+                </form>
             </div>
         </div>
     </body>

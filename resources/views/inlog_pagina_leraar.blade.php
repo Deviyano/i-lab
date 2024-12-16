@@ -18,12 +18,12 @@
         <div class="center-container">
             <div class="inlog-container">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo Image" class="logo-img">
-                <h1 class="title">Als wie wil je inloggen?</h1>
-                <div class="inlog-button-container">
-                    <a href="{{ route('inlog.leerling.view') }}" class="button kid">Leerling</a>
-                    <a href="{{ route('inlog.leraar.view') }}" class="button teacher">Leraar</a>
-                    <a href="{{ route('inlog.ilab.view') }}" class="button admin">I-lab Medewerker</a>
-                </div>
+                <h1>Log in</h1>
+                <form id="QuizFormCode" method="POST" style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="username" name="username" placeholder="Voer uw gebruikersnaam in" class="textarea Margin" required>
+                    <input type="password" id="password" name="password" placeholder="Voer uw wachtwoord in" class="textarea Margin" required>
+                    <button type="submit" class="button">Log in</button>
+                </form>
             </div>
         </div>
     </body>
