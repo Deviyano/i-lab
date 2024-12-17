@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('evaluations.index')" :active="request()->routeIs('evaluations')">
-                        {{ __('Dashboard') }}
+                        {{ __('evaluatie') }}
                     </x-nav-link>
                     <!-- Add an extra link to the quiz route. -->
                 </div>

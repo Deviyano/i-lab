@@ -17,12 +17,12 @@ class EvaluationsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'rating' => 'required|integer|min:1|max:5',
+            'vraag1' => 'required|string|max:255',
+            'vraag2' => 'required|string|max:255',
+            'vraag3' => 'required|integer|min:1|max:5',
         ]);
 
-        Evaluation::create($request->all());
+        Evaluations::create($request->all());
 
         return redirect()->route('evaluations.index')->with('success', 'Evaluatie succesvol toegevoegd!');
     }
