@@ -31,6 +31,7 @@ class LoginController extends Controller
         $quizId = $request->input('quizId');
 
         $quiz = Quiz::where('code', $quizId)->first();
+        
 
         if (!$quiz) {
             return redirect()->back()->withErrors(['quizId' => 'Code is ongeldig of bestaat niet.']);
