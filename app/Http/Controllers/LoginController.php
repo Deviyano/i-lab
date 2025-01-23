@@ -22,6 +22,11 @@ class LoginController extends Controller
         return view('inlog_pagina_leraar');
     }
 
+    public function enterTeamName(Request $request, $quizId)
+    {
+        return view('enter_team_name', compact('quizId'));
+    }
+
     public function checkCode(Request $request)
     {
         $request->validate([
@@ -35,20 +40,15 @@ class LoginController extends Controller
             return redirect()->back()->withErrors(['quizId' => 'Code is ongeldig of bestaat niet.']);
         }
 
-        return view('enter_team_name', compact('quizId'));
-    }
-
-    public function enterTeamMembers($quizId)
-    {
-        return view('enter_team_members', compact('quizId'));
+        return route('enter_team_name', compact('quizId'));
     }
 
 
     public function startQuiz(Request $request, $quizId)
-    {
-        $teamMembers = session('teamMembers', []);
-        $quiz = Quiz::findOrFail($quizId);
+{
+    $TeamName = "Team11";
 
-        return view('quiz_start', compact('quiz', 'teamMembers'));
-    }
+    return view('quiz_test', compact('quizId', 'TeamName'));
+}
+
 }
