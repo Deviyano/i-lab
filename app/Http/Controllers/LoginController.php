@@ -29,14 +29,26 @@ class LoginController extends Controller
         ]);
 
         $quizId = $request->input('quizId');
-
         $quiz = Quiz::where('code', $quizId)->first();
-        
 
         if (!$quiz) {
             return redirect()->back()->withErrors(['quizId' => 'Code is ongeldig of bestaat niet.']);
         }
 
-        return redirect()->route('quiz.start', ['quiz' => $quiz->id]);
+        return view('enter_team_name', compact('quizId'));
+    }
+
+    public function enterTeamMembers($quizId)
+    {
+        return view('enter_team_members', compact('quizId'));
+    }
+
+
+    public function startQuiz(Request $request, $quizId)
+    {
+        $teamMembers = session('teamMembers', []);
+        $quiz = Quiz::findOrFail($quizId);
+
+        return view('quiz_start', compact('quiz', 'teamMembers'));
     }
 }

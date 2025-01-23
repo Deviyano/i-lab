@@ -17,13 +17,13 @@
         <div class="center-container">
             <div class="inlog-container">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo Image" class="logo-img">
-                <form id="QuizFormCode" method="POST" action="{{ route('inlog.CheckCode') }}">
+                <form id="QuizFormCode" method="POST" action="{{ route('quiz.startQuiz') }}">
                     @csrf
                     @if ($errors->has('quizId'))
                         <div class="error">{{ $errors->first('quizId') }}</div>
                     @endif
-                    <h1>Voer de Quiz code in</h1>
-                    <input class="textarea" type="text" id="quizId" name="quizId" placeholder="Voer de code hier in" maxlength="6" required>    
+                    <h1>Voer een team naam in</h1>
+                    <input class="textarea" type="text" id="quizId" name="quizId" placeholder="Voer de team naam hier in" required>    
                     <button class="button" type="submit">Doe mee</button>
                 </form>
             </div>

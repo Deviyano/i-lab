@@ -72,45 +72,6 @@ body {
     margin: 20px;
 }
 
-.opdrachten {
-    width: 20%;
-    padding: 10px;
-    background-color: white;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-.opdrachten ul {
-    list-style: none;
-    padding: 0;
-}
-
-.opdrachten ul li {
-    margin: 10px 0;
-    background-color: #a1daf8;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.opdrachten ul li:nth-child(2n) {
-    background-color: #009fe3;
-}
-
-.opdrachten ul li:nth-child(3n) {
-    background-color: #0075bf;
-}
-
-.opdrachten ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.opdrachten ul li:hover {
-    background-color: #163384;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -137,32 +98,6 @@ body {
     margin-bottom: 20px;
 }
 
-.video {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-video {
-    width: 100%;
-    max-width: 600px; 
-    border-radius: 5px;
-}
-
-.question {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.answer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
 
 textarea {
     width: 80%;
