@@ -18,7 +18,9 @@
         <div class="center-container">
             <div class="inlog-container">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo Image" class="logo-img">
-                <h1 class="title">QUIZZ???/</h1>
+                <h1>Welkom bij de quiz!</h1>
+                <p>Quiz ID: {{ $quizId }}</p>
+                <p>Team Naam: {{ $TeamName }}</p>
             </div>
         </div>
     </body>

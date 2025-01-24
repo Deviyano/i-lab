@@ -17,5 +17,4 @@ Route::post('/check-code', [LoginController::class, 'checkCode'])->name('inlog.C
 Route::get('/team-naam/{quizId}', [LoginController::class, 'enterTeamName'])->name('inlog.EnterTeamName');
 Route::post('/naar-quiz/{quizId}', [LoginController::class, 'startQuiz'])->name('quiz.startQuiz');
 
-
 require __DIR__.'/auth.php';

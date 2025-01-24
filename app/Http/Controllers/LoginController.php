@@ -40,15 +40,13 @@ class LoginController extends Controller
             return redirect()->back()->withErrors(['quizId' => 'Code is ongeldig of bestaat niet.']);
         }
 
-        return route('enter_team_name', compact('quizId'));
+        return redirect()->route('inlog.EnterTeamName', ['quizId' => $quizId]);
     }
 
-
     public function startQuiz(Request $request, $quizId)
-{
-    $TeamName = "Team11";
+    {
+        $TeamName = $request->input('teamName');
 
-    return view('quiz_test', compact('quizId', 'TeamName'));
-}
-
+        return view('quiz_test', compact('quizId', 'TeamName'));
+    }
 }

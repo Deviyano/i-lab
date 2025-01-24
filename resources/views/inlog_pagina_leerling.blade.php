@@ -17,7 +17,7 @@
         <div class="center-container">
             <div class="inlog-container">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo Image" class="logo-img">
-                <form id="QuizFormCode" method="POST" action="{{ route('inlog.EnterTeamName', ['quizId']) }}">
+                <form id="QuizFormCode" method="POST" action="{{ route('inlog.CheckCode') }}">
                     @csrf
                     @if ($errors->has('quizId'))
                         <div class="error">{{ $errors->first('quizId') }}</div>
