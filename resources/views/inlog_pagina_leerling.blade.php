@@ -23,7 +23,7 @@
                         <div class="error">{{ $errors->first('quizId') }}</div>
                     @endif
                     <h1>Voer de Quiz code in</h1>
-                    <input class="textarea" type="text" id="quizId" name="quizId" placeholder="Voer de code hier in" maxlength="6" required>    
+                    <input class="textarea" type="text" id="quizId" name="quizId" placeholder="Voer de code hier in" maxlength="5" required>    
                     <button class="button" type="submit">Doe mee</button>
                 </form>
             </div>

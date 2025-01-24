@@ -30,7 +30,7 @@ class LoginController extends Controller
     public function checkCode(Request $request)
     {
         $request->validate([
-            'quizId' => 'required|string|max:6',
+            'quizId' => 'required|string|max:5',
         ]);
 
         $quizId = $request->input('quizId');
@@ -45,6 +45,11 @@ class LoginController extends Controller
 
     public function startQuiz(Request $request, $quizId)
     {
+        $request->validate([
+            'quizId' => 'required|string|max:25',
+        ]);
+
+
         $TeamName = $request->input('teamName');
 
         return view('quiz_test', compact('quizId', 'TeamName'));

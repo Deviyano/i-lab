@@ -20,7 +20,7 @@
                 <h1>Voer een team naam in</h1>
                 <form method="POST" action="{{ route('quiz.startQuiz', ['quizId' => $quizId]) }}">
                     @csrf
-                    <input class="textarea" type="text" name="teamName" placeholder="Voer je team naam in" required>
+                    <input class="textarea" type="text" name="teamName" placeholder="Voer je team naam in" maxlength="25" required>
                     <button class="button" type="submit">Start Quiz</button>
                 </form>
             </div>
