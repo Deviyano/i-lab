@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-        Mail::to($user->email)->send(new StudentResult($user)); 
+        //Mail::to($user->email)->send(new StudentResult($user)); 
         return redirect(route('dashboard', absolute: false));
     }
 }

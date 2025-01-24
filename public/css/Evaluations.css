@@ -1,18 +1,27 @@
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+#logo
+{
+    height: 125px;
+    width: auto;
+    margin-right: 20px; 
+    text-align: center;
+    
+}
 
 * {
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
     font-weight: 800;
+    text-align: center;
 }
 
 body {
-    background: linear-gradient(to right, #eaf1f5 20%, #009fe3 40%, #0075bf 69%, #163384 100%);
+    background: linear-gradient(to right, #a1daf8 0%, #009fe3 25%, #0075bf 50%, #163384 100%);
     margin: 0;
     padding: 0;
     text-align: center;
 }
-
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -25,19 +34,4 @@ button {
     text-align: center;
 }
 
-button:hover {
-    background-color: #009fe3;
-    transform: scale(1.04);
-    transition: all ease-in-out 0.2s;
-    cursor: pointer;
-    text-align: center;
-}
-
-#logo
-{
-    height: 125px;
-    width: auto;
-    margin-right: 1220px; 
-    
-}
 
