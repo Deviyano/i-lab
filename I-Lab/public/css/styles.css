@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #a1daf8 0%, #009fe3 25%, #0075bf 50%, #163384 100%);
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.inlog-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo-img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.inlog-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button {
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button.kid {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.button.teacher {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+}
+
+.button.admin {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+/* Logo container: verbeter de uitlijning */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+/* Link sectie: verticaal onder elkaar plaatsen */
+.logo-container .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+/* Individuele links: modern en responsief */
+.logo-container .link a {
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    background-color: #0075bf;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Hover-effect voor de links */
+.logo-container .link a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+/* Responsive gedrag: betere schaling op kleine schermen */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .logo-container .link a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+.logo_img img {
+    max-height: 60px;
+    margin-right: 15px;
+}
+
+.link a {
+    color: #0075bf;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.link a:hover {
+    background-color: rgba(0, 117, 191, 0.2);
+}
+
+/* Hoofdcontent */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    color: white;
+}
+
+.main-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.main-content hr {
+    width: 50%;
+    border: 1px solid white;
+    margin: 10px 0;
+}
+
+/* Zijmenu links */
+.opdrachten {
+    width: 25%;
+    padding: 15px;
+    background-color: white;
+    color: #0075bf;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.opdrachten h3 {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #163384;
+}
+
+.opdrachten ul {
+    list-style: none;
+    padding: 0;
+}
+
+.opdrachten ul li {
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #a1daf8;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #163384;
+    transition: background-color 0.3s ease;
+}
+
+.opdrachten ul li:nth-child(even) {
+    background-color: #009fe3;
+    color: white;
+}
+
+.opdrachten ul li:hover {
+    background-color: #163384;
+    color: white;
+    cursor: pointer;
+}
+
+/* Formulier en container */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input en textareas */
+input, textarea, select {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #163384;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #0075bf;
+    box-shadow: 0 0 5px rgba(0, 117, 191, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+/* Knoppen */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1f48b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #009fe3;
+    transform: scale(1.05);
+}
+
+/* Video sectie */
+.video video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opdrachten {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
