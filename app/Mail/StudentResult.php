@@ -17,10 +17,10 @@ class StudentResult extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
-    {
-    protected User $user, 
-    }
+    //public function __construct()
+    //{
+    //    protected User $user, 
+    //}
 
     /**
      * Get the message envelope.

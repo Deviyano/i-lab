@@ -36,7 +36,6 @@
     @if(session('success'))
         <p style="color: black;">{{ session('success') }}</p>
     @endif
-
     {{-- Formulier voor nieuwe evaluatie --}}
     <h2>Nieuwe Evaluatie</h2>
     @if($errors->any())

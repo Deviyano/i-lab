@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('evaluations', function (Blueprint $table) {
             $table->id();
-            $table->string('vraag1');          
-            $table->text('vraag2')->nullable(); 
-            $table->unsignedTinyInteger('vraag3');   
-            $table->timestamps();           
+            $table->text('vraag1')->nullable(); // Maak het veld nullable als het niet verplicht moet zijn
+            $table->text('vraag2')->nullable();
+            $table->text('vraag3')->nullable();
+            $table->timestamps();          
         });
     }
 
